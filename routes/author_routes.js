@@ -1,6 +1,6 @@
-const express = require("express");
-const router = express.Router();
-const AuthorController = require("./../controllers/author_controller");
+const express=require("express");
+const AuthorController=require("./../controllers/author_controller");
+const router=express.Router();
 
 router.get("/", AuthorController.index);
 
@@ -10,12 +10,14 @@ router.get("/new", AuthorController.make);
 
 router.get("/:id", AuthorController.show);
 
-router.delete("/:id", AuthorController.destroy);
-
 router.put("/:id", AuthorController.update);
 
 router.patch("/:id", AuthorController.update);
 
+router.get("/:id", AuthorController.show);
+
 router.get("/:id/edit", AuthorController.edit);
+
+router.delete("/:id", AuthorController.destroy);
 
 module.exports = router;

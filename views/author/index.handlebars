@@ -1,15 +1,15 @@
-<h1>Authors</h1>
+{{!-- show all authors --}}
+<h1>All Authors</h1>
+ 
+ <a href="/authors/new">Create New Author</a>
 
-<a href="/authors/new">Create New Author</a>
-
-{{#each authors}}
+{{#each authors}} {{!-- authors is the model name we assigned in author_model.js --}}
     <div>
-        <p>Name: {{ this.name }}</p>
-        <p>Bio: {{ this.bio }}</p>
-        <p>Gender: {{ this.gender }}</p>
+       <p>Name: {{this.name}}</p>
+       <p>Bio: {{this.name}}</p>
+       <p>Gender: {{this.name}}</p>
     </div>
-    <a href="/authors/{{this._id}}">View Author</a>
+    <a href="/authors/{{this._id}}">View Author</a> {{!-- the link individual author page --}}
     <a href="/authors/{{this._id}}?_method=DELETE">Delete Author</a>
     <hr />
-
 {{/each}}
