@@ -1,6 +1,6 @@
 const AuthorModel = require("./../database/models/author_model");
 
-
+//full CRUD for a resource: 7 functions (index, create, new, show, edit, update, delete)
 async function create(req, res){
     let { name, bio, gender } = req.body;
     let author = await { name, bio, gender }; 

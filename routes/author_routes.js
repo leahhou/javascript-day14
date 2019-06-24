@@ -5,8 +5,6 @@ const AuthorController=require("./../controllers/author_controller");
 const router=express.Router();
 
 
-
-
 router.get("/", AuthorController.index);
 
 router.post("/", AuthorController.create);

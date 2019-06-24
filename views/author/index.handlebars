@@ -1,7 +1,8 @@
 {{!-- show all authors --}}
 <h1>All Authors</h1>
  
- <a href="/authors/new">Create New Author</a>
+ <a href="/authors/new">Create New Author</a> 
+ {{!-- a tag's link is the route endpoint --}}
 
 {{#each authors}} {{!-- authors is the model name we assigned in author_model.js --}}
     <div>
@@ -9,7 +10,8 @@
        <p>Bio: {{ this.bio}}</p>
        <p>Gender: {{ this.gender }}</p>
     </div>
-    <a href="/authors/{{ this._id }}">View Author</a> {{!-- the link individual author page --}}
+    <a href="/authors/{{ this._id }}">View Author</a> {{!-- the link to the individual author route--}}
+     <a href="/authors/{{ this._id }}/edit">Edit Author</a> 
     <a href="/authors/{{ this._id }}?_method=DELETE">Delete Author</a>
     <hr />
 {{/each}}

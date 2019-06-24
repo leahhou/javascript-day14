@@ -1,5 +1,9 @@
+<a href="/authors">Return All Authors</a>  {{!-- a tag's link is the route endpoint --}}
 <h1>Author</h1>
 
 <p>Name: {{author.name}}</p> {{!-- author is variable created under AuthorController.show method --}}
 <p>Bio: {{author.bio}}</p>
 <p>Gender: {{author.gender}}</p>
+
+<a href="/authors/{{ author._id }}/edit">Edit Author</a> 
+<a href="/authors/{{ author._id }}?_method=DELETE">Delete Author</a>

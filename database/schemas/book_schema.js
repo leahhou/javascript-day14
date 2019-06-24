@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 const CommentSchema = require("./comment_schema");
+const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
     name: {
@@ -9,7 +9,7 @@ const BookSchema = new Schema({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "author"
+        ref: "author" // name of the database it refer to
     },
     comments: [CommentSchema]
 });
